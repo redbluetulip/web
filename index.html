@@ -127,16 +127,13 @@
     <!-- 遮罩层 -->
     <div class="overlay" id="overlay">
         <div class="prize-image" id="prizeImage">
-            <img src="https://xbyolive.com/wp-content/uploads/2024/05/a-white-deep-fryer-or-oil-free-fryer-appliance-to-2023-11-27-05-34-25-utc-1.jpg.webp" alt="空气炸锅">
+            <img src="https://consumer.panasonic.cn/static/upload/image/20221124/1669265136841168.jpg" alt="空气炸锅">
             <p style="font-size: 2rem; color: #ffcc00;">恭喜抽中——空气炸锅</p>
         </div>
     </div>
 
     <script>
         function drawPrize() {
-            // 先显示遮罩层
-            document.getElementById("overlay").style.display = "block";
-
             // 播放转盘动画，转到空气炸锅格子
             document.getElementById("wheel").style.transform = "rotate(3622.5deg)"; // 确保最后停在空气炸锅
 
@@ -145,6 +142,9 @@
                 // 显示中奖信息
                 document.getElementById("result").innerText = "恭喜抽中——空气炸锅";
 
+                // 显示遮罩层
+                document.getElementById("overlay").style.display = "block";
+                
                 // 显示奖品图片和信息
                 document.getElementById("prizeImage").style.display = "block";
             }, 3000); // 动画持续3秒
