@@ -85,9 +85,6 @@
         </div>
         <button onclick="drawPrize()">点击抽奖</button>
         <div id="result"></div>
-        <div class="prize-image" id="prizeImage">
-            <img src="https://via.placeholder.com/300x200?text=%E7%A9%BA%E6%B0%94%E7%82%B8%E9%94%85" alt="空气炸锅">
-            <p>恭喜抽中——空气炸锅</p>
         </div>
     </div>
 
@@ -105,10 +102,7 @@
             // 等待转盘停止并显示结果
             setTimeout(() => {
                 const prize = prizes[randomStop / 72];  // 根据停的位置选择奖品
-                document.getElementById("result").innerText = `恭喜抽中——${prize}`;
-                
-                // 显示奖品图片和信息
-                document.getElementById("prizeImage").style.display = "block";
+                document.getElementById("result").innerText = `恭喜抽中——空气炸锅`;
             }, 3000); // 动画持续3秒
         }
     </script>
