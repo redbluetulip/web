@@ -94,8 +94,8 @@
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
+            width: 1200;
+            height: 560;
             background-color: rgba(0, 0, 0, 0.8);
             color: white;
             z-index: 3; /* 确保遮罩层在页面最上方 */
@@ -139,14 +139,14 @@
 
             // 等待转盘停止并显示结果
             setTimeout(() => {
-                // 显示中奖信息
-                document.getElementById("result").innerText = "恭喜抽中——空气炸锅";
 
                 // 显示遮罩层
                 document.getElementById("overlay").style.display = "block";
                 
-                // 显示奖品图片和信息
-                document.getElementById("prizeImage").style.display = "block";
+                setTimeout(() => {
+                    // 显示奖品图片和信息
+                    document.getElementById("prizeImage").style.display = "block";
+                }, 500); // 延迟1秒
             }, 3000); // 动画持续3秒
         }
     </script>
